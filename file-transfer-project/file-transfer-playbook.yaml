@@ -1,6 +1,11 @@
 - name: Copy local file to remote targets
   hosts: all
   tasks:
+    - name: create dir if does not exists
+      file:
+        path: ~/test
+        state: directory
+        mode: '0755'
     - name: copying file with playbook
       become: true
       copy:
