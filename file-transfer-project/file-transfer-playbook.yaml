@@ -9,5 +9,5 @@
     - name: copying file with playbook
       become: true
       copy:
-        src: test/test.txt
+        src: /home/osboxes/test/test.txt
         dest: ~/test
