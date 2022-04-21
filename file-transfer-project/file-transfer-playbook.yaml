@@ -1,0 +1,8 @@
+- name: Copy local file to remote targets
+  hosts: all
+  tasks:
+    - name: copying file with playbook
+      become: true
+      copy:
+        src: ~/test/test.txt
+        dest: ~/test
